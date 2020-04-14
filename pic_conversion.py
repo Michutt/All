@@ -16,6 +16,11 @@ img.show()
 img = img.rotate(45)
 img.show()
 
+# przeskalowanie (tworzenie miniaturki)
+img.thumbnail((128, 128))
+img.show()
+
+
 # przekształcenie perspektywistyczne
 matrix = cv2.getPerspectiveTransform(points1, points2)
 img = cv2.warpPerspective(opencvImage, matrix, (1000,1000))
